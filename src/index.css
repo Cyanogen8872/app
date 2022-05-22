@@ -1,13 +1,125 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  margin: 0 !important;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+.font-face-gm {
+  font-family: "GoldmanBold";
+ }
+
+@font-face {
+  font-family: "GoldmanBold";
+  src: local("GoldmanBold"),
+   url("./assets/NotoSansTC-Bold.otf") format("truetype");
+  font-weight: bold;
+}
+
+/* .container{
+  overflow:hidden;
+  display:block;
+  filter: blur(5px);
+} */
+
+.video-container {
+  height: 1024px;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(255,0,0,0) 0%,rgba(0,0,0,1) 80%);
+}
+
+video {
+  z-index: -1;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.video-container .caption {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+}
+.video-center {
+  filter: blur(2px);
+  
+}
+
+.slider {
+  z-index: -1;
+}
+
+.slider-container {
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 2%,rgba(0,0,0,0) 15%);
+}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+
+
+.glassBox {
+  width: 100%;
+  height: 400px;
+  max-width: 300px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.glassBox, .glassBox * {
+  box-sizing: border-box;
+  transition: 400ms;
+}
+.glassBox__imgBox img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.glassBox__title {
+  text-align: center;
+  margin-top: 15px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.glassBox__content {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Lato";
+  letter-spacing: 0.1em;
+  opacity: 0;
+}
+.glassBox:hover .glassBox__imgBox {
+  transform: translateY(-50px);
+}
+.glassBox:hover .glassBox__imgBox img {
+  transform:  scale(1.4);
 }
