@@ -23,6 +23,14 @@ body {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "NotoSansTC-M";
+  src: local("NotoSansTC-M"),
+   url("./assets/NotoSansTC-Medium.otf") format("truetype");
+}
+
+
+
 /* .container{
   overflow:hidden;
   display:block;
@@ -56,11 +64,13 @@ video {
 }
 
 .slider {
-  z-index: -1;
+  z-index: 0;
+  
 }
 
 .slider-container {
   background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 2%,rgba(0,0,0,0) 15%);
+  background-color: black;
 }
 
 @keyframes example {
@@ -68,12 +78,50 @@ video {
   to {background-color: yellow;}
 }
 
+.glass-box {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  display: inline-block;
+  margin: 25px;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
 
+.glass-box:hover {
+  transform:  scale(1.1);
+}
+
+.glass-box-img {
+  height: 500px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.glass-box-img > img {
+  max-width: 500px
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  -ms-overflow-style: none;
+  height: 700px;
+}
 
 .glassBox {
   width: 100%;
-  height: 400px;
-  max-width: 300px;
+  max-width: 800px;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(2px);
@@ -81,13 +129,15 @@ video {
   border-right-color: rgba(255, 255, 255, 0.1);
   border-bottom-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  padding: 25px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
+
 .glassBox, .glassBox * {
   box-sizing: border-box;
   transition: 400ms;
@@ -95,7 +145,7 @@ video {
 .glassBox__imgBox img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .glassBox__title {
   text-align: center;
@@ -117,9 +167,113 @@ video {
   letter-spacing: 0.1em;
   opacity: 0;
 }
-.glassBox:hover .glassBox__imgBox {
+/* .glassBox:hover .glassBox__imgBox {
   transform: translateY(-50px);
+} */
+/* .glassBox:hover .glassBox__imgBox img {
+  transform:  scale(1.2);
+} */
+
+
+.float-animation1 {
+  animation: floating 3s ease-in-out infinite;
+  animation-delay: 0s;
 }
-.glassBox:hover .glassBox__imgBox img {
-  transform:  scale(1.4);
+
+.float-animation2 {
+  animation: floating 3.1s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.float-animation3 {
+  animation: floating 2.6s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+.float-animation4 {
+  animation: floating 2.7s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.float-animation5 {
+  animation: floating 2.7s ease-in-out infinite;
+  animation-delay: 0.1s;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 12px); }
+  100%   { transform: translate(0, -0px); }   
+}
+
+.txt-hover-outer:hover .txt-hover{
+  background-color: black !important;
+  color:white !important;
+  animation: 1s clip;
+}
+
+.page-cover{
+  background-color: #fff !important;
+  animation: 3s clipChangePage;
+}
+
+@keyframes clip {
+  0% { clip-path: polygon(0 0, 20% 0, 0% 100%, 0 100%); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+@keyframes clipChangePage {
+  0% { clip-path: circle(0% at 40px 40px); }
+  99% { clip-path: circle(200% at 40px 40px); }
+  100% { clip-path: circle(0% at 40px 40px); }
+}
+
+.txt-hover {
+  pointer-events: auto;
+  padding: 12px 30px;
+}
+
+.scene {
+  width: 80%;
+  max-width: 400px;
+  display: inline-block !important;
+  justify-content: space-between;
+  perspective: 800px;
+  padding: 26px;
+}
+.scene .card {
+  width: 100%;
+  min-width: 240px;
+  max-width: 400px;
+  height: 400px;
+  color: white;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  transform-style: preserve-3d;
+  
+}
+.scene .card:hover {
+  transform: rotateY(0.5turn);
+}
+.scene .card .card__face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: 1s ease-in-out;
+}
+.scene .card .card__face img {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+.scene .card .card__face--back {
+  transform: rotateY(0.5turn);
+}
+
+.css-118zhtq-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab {
+    background-color: rgba(0,0,0,0.6) !important;
 }
