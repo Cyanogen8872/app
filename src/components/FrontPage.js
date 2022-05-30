@@ -28,7 +28,7 @@ function FrontPage(props) {
             <h2>I am a web developer and I am very passionate about technology and visualization.</h2> 
             <p style={{opacity: 0.5}}>Scroll</p> 
             <svg height="250px" style={{paddingTop: '20px'}}>
-              <path fill="none" stroke="black" strokeWidth="2" id="triangle" d={`M150 0 L150 ` + -((props.pos + window.innerHeight < 0 ? props.pos + window.innerHeight : '0'))}/>
+              <path fill="none" stroke="black" strokeWidth="2" id="triangle" d={`M150 0 L150 ` + -((props.pos + window.innerHeight < 0 ? ((props.pos + window.innerHeight) < 250 ? (props.pos + window.innerHeight) : '0') : '0'))}/>
             </svg>
           </div>
             
