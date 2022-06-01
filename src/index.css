@@ -207,14 +207,14 @@ video {
 }
 
 .txt-hover-outer:hover .txt-hover{
-  background-color: black !important;
+  background-color: rgba(0,0,0,0.6) !important;
   color:white !important;
   animation: 1s clip;
 }
 
 .page-cover{
   background-color: #fff !important;
-  animation: 3s clipChangePage;
+  animation: 2s clipChangePage;
 }
 
 @keyframes clip {
@@ -274,6 +274,10 @@ video {
   transform: rotateY(0.5turn);
 }
 
-.css-118zhtq-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab {
+.MuiFab-sizeLarge {
     background-color: rgba(0,0,0,0.6) !important;
+}
+
+.link-btn {
+  color: #fff !important;
 }

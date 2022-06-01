@@ -144,7 +144,7 @@ function NomalSection(props) {
             <Button style={{
                 borderRadius: 0,
                 padding: "0px 0px",
-                borderColor: "black",
+                borderColor: "rgba(0,0,0,0.6)",
                 color: "black",
                 border: '2px solid',
                 fontWeight: 500,

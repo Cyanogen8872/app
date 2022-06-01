@@ -133,13 +133,4 @@ class Home extends Component {
   }
 }
 
-
-
-
-const pageTransition = {
-  // type: "tween",
-  // ease: "anticipate",
-  // duration: 0.5
-};
-
 export default Home;

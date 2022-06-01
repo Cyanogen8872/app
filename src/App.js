@@ -3,15 +3,18 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Switch, Route, NavLink, useLocation, Link } from "react-router-dom";
 import Home from "./page/Home"
 import About from "./page/About"
+import Work from "./page/Work"
 import { SpeedDialIcon, SpeedDial, SpeedDialAction,  } from '@mui/material'
-import FileCopyIcon from '@mui/icons-material/FileCopy'
-import SaveIcon from '@mui/icons-material/Save'
+import BungalowIcon from '@mui/icons-material/Bungalow';
+import AccessibilityIcon from '@mui/icons-material/Accessibility';
+import WorkIcon from '@mui/icons-material/Work';
 
 function App() {
   const location = useLocation();
   const actions = [
-    { icon: <Link to="/"><FileCopyIcon /></Link>, name: 'Copy' },
-    { icon: <Link to="/about"><SaveIcon /></Link>, name: 'Save' },
+    { icon: <Link style={{ color: 'rgba(0,0,0,0.6)', paddingTop: '20%'  }} to="/"><BungalowIcon /></Link>, name: 'Copy' },
+    { icon: <Link style={{ color: 'rgba(0,0,0,0.6)', paddingTop: '20%' }} to="/about"><AccessibilityIcon /></Link>, name: 'About' },
+    { icon: <Link style={{ color: 'rgba(0,0,0,0.6)', paddingTop: '20%' }} to="/Work"><WorkIcon /></Link>, name: 'My work /experiences' },
   ];
 
   return (
@@ -38,7 +41,7 @@ function App() {
           <AnimatePresence>
             <Switch location={location} key={location.pathname}>
               <Route path="/about" component={About} />
-              <Route path="/settings" component={Settings} />
+              <Route path="/work" component={Work} />
               <Route path="/" component={Home} />
             </Switch>
           </AnimatePresence>
@@ -61,7 +64,7 @@ const pageVariants = {
   out: {
     opacity: 0,
     x: "100vw",
-    scale: 1.2
+    scale: 1.5
   }
 };
 
