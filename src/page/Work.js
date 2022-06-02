@@ -1,7 +1,35 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect, useState  } from 'react'
 import { AnimatePresence, motion } from "framer-motion";
+import { Card, Grid } from '@mui/material'
 
 function Work() {
+  const [offsetX, setoffsetX] = useState(0)
+  const [offsetY, setoffsetY] = useState(0)
+  
+  useEffect(() => {
+    document.addEventListener('mousemove', mouseMove);
+  });
+
+  const mouseMove = (e) => {
+    const friction = 1/190
+    let followX = (window.innerWidth / 2 - e.clientX);
+    let followY = (window.innerHeight / 2 - e.clientY);
+
+    let x = 0,
+        y = 0
+    x +=( (-followX - x) * friction);
+    y += (followY - y) * friction;
+
+    setoffsetX(x)
+    setoffsetY(y)
+  }
+  
+  let offset = {
+    transform: `translate(0%, 0%) perspective(300px)
+                rotateY(${offsetX}deg)
+                rotateX(${offsetY}deg)
+                `
+               }
   return (
     <motion.div
       initial="initial"
@@ -9,17 +37,141 @@ function Work() {
       exit="out"
       variants={pageVariants}
       >
-      <h1>About</h1>
-      <p>
-        Let's animate transitions between React Router routes with Framer Motion
-      </p>
-      <h2>Framer Motion</h2>
-      <p>
-        Framer Motion is a great library for animations in React easily and
-        quickly.
-      </p>
-      <h2>React Router</h2>
-      <p>One of the most well known routers in the React ecosystem.</p>
+      <Card sx={{ minWidth: 275, border: "none", boxShadow: "none", width: '100%' }} className="text-center">
+        <Grid
+          container
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+          >
+          <div width="100%" style={{height: '80px', width: '100%',}}></div>
+          <div className='wrapper' style={offset}>
+            
+            <div className="shape">
+            
+            </div>
+            <div className="shape2">
+              <img style={{width: '100%', maxWidth: "590px"}} src={require("../assets/code.png")} alt=""/>
+            </div>
+            <p></p>
+          </div>
+
+          <div className="" style={{width: '100%'}}>
+            <div style={{"width": '100%',boxShadow: '0px -10px 10px rgba(0, 0, 0, 0.1)', zIndex:32 }} >
+              
+              
+              <h2 className="text-center section-title-text">The Program for Management Development</h2>
+              <div className="scene">
+                <div className="card">
+                  <div className="card__face">
+                    <img src={require("../assets/PMD1.png")} width="100%" alt=""/>
+                  </div>
+                </div>
+              </div>
+
+              <div className="scene">
+                <div className="card">
+                  <div className="card__face ">
+                    <img src={require("../assets/PMD_2.png")} width="100%" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <h2 className="text-center section-title-text">Corinthia by the sea</h2>
+            <div style={{"width": '100%', zIndex:32 }} >
+              <div className="scene">
+                <div className="card">
+                  <div className="card__face">
+                    <img src={require("../assets/CBS1.png")} width="100%" alt=""/>
+                  </div>
+                </div>
+              </div>
+
+              <div className="scene">
+                <div className="card">
+                  <div className="card__face ">
+                    <img src={require("../assets/CBS2.png")} width="100%" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <h2 className="text-center section-title-text">Government Project</h2>
+            <div style={{"width": '100%', zIndex:32 }} >
+              <div className="scene">
+                <div className="card">
+                  <div className="card__face">
+                    <img src={require("../assets/C1.png")} width="100%" alt=""/>
+                  </div>
+                </div>
+              </div>
+
+              <div className="scene">
+                <div className="card">
+                  <div className="card__face ">
+                    <img src={require("../assets/C2.png")} width="100%" alt=""/>
+                  </div>
+                </div>
+              </div>
+
+              <div className="scene">
+                <div className="card">
+                  <div className="card__face ">
+                    <img src={require("../assets/C3.png")} width="100%" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <h2 className="text-center section-title-text">Universal Music Hong Kong x Mcdonald</h2>
+            <div style={{"width": '100%', zIndex:32 }} >
+              <div className="scene">
+                <div className="card">
+                  <div className="card__face">
+                    <img src={require("../assets/G_M.png")} width="100%" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+          
+          {/* <div>
+            <div className='wrapper-photo' style={offset}>
+            
+              <div className="shape-photo">
+              <img width="100%" src={require("../assets/PMD1.png")} alt=""/>
+              </div>
+              <div className="shape2-photo">
+              </div>
+              <p></p>
+            </div>
+
+          <h1 className="text-center">The Program for Management Development</h1>
+          </div>
+
+          <div>
+            <div className='wrapper-photo' style={offset}>
+            
+              <div className="shape-photo">
+              <img width="100%" src={require("../assets/PMD1.png")} alt=""/>
+              </div>
+              <div className="shape2-photo">
+              </div>
+              <p></p>
+            </div>
+
+          <h1 className="text-center">The Program for Management Development</h1>
+          </div> */}
+          
+
+        </Grid>
+      </Card>
     </motion.div>
   );
 }

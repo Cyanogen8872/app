@@ -281,3 +281,144 @@ video {
 .link-btn {
   color: #fff !important;
 }
+
+
+.wrapper {
+  transform: translate(0%, 0%) perspective(600px) rotateY(20deg) rotateX(10deg);
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 300px;
+  transform-origin: center;
+  border: 2px solid rgba(0,0,0,0);
+  border-radius: 10px; }
+.wrapper .shape {
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  transform: translateZ(20px) scale(0.85);
+  transform-origin: center;
+  border: 2px solid rgba(0,0,0,0);
+  opacity: 0.8; }
+
+.wrapper .shape2 {
+position: absolute;
+top: 0;
+left: 0;
+z-index: 2;
+width: 100%;
+height: 350px;
+transform: translateZ(50px) translateX(0px) translateY(-26px) scale(0.55);
+border: 0px solid rgba(0,0,0,0.6);
+transform-origin: center;
+opacity: 0.6;
+border-radius: 2px; }
+.wrapper p {
+text-align: center; }
+
+
+.text-center {
+  text-align: center;
+}
+
+.wrapper-photo {
+  transform: translate(0%, 0%) perspective(600px) rotateY(0deg) rotateX(0deg);
+  transform-style: preserve-3d;
+  width: 30%;
+  min-width: 288px;
+  transform-origin: center;
+  display: block;
+  border-radius: 2px; }
+.wrapper-photo .shape-photo {
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(-20px);
+  transform-origin: center;
+  border: 2px solid rgba(0,0,0,0.2);
+  opacity: 0.8; }
+
+.wrapper-photo .shape2-photo {
+position: absolute;
+top: 0;
+left: 0;
+z-index: 2;
+width: 100%;
+height: 100%;
+transform: translateZ(0px);
+border: 2px solid rgba(0,0,0,0.3);
+transform-origin: center;
+opacity: 0.8;
+border-radius: 2px; }
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Cool infinite background scrolling animation. * Twitter: @kootoopas */
+/* Exo thin font from Google. */
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+ @-webkit-keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px -50px;
+	}
+}
+ @-moz-keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px -50px;
+	}
+}
+ @-o-keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px -50px;
+	}
+}
+ @keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px -50px;
+	}
+}
+ @-webkit-keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px -50px;
+	}
+}
+ @-moz-keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px -50px;
+	}
+}
+ @-o-keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px -50px;
+	}
+}
+ @keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px -50px;
+	}
+}
+/* Main styles */
+ .move-bg {
+	 color: black;
+	 text-align: center;
+	/* img size is 50x50 */
+	 background: url("./assets/bg.png") repeat 0 0;
+	 -webkit-animation: bg-scrolling-reverse 2s infinite;
+	/* Safari 4+ */
+	 -moz-animation: bg-scrolling-reverse 2s infinite;
+	/* Fx 5+ */
+	 -o-animation: bg-scrolling-reverse 2s infinite;
+	/* Opera 12+ */
+	 animation: bg-scrolling-reverse 2s infinite;
+	/* IE 10+ */
+	 -webkit-animation-timing-function: linear;
+	 -moz-animation-timing-function: linear;
+	 -o-animation-timing-function: linear;
+	 animation-timing-function: linear;
+}
+
+.section-title-text {
+  padding-top: 40px;
+  margin-top: 0;
+}
+ 
