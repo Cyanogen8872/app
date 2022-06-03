@@ -56,19 +56,20 @@ function Work() {
             </AppBar>
           </Box>
 
-          <div width="100%" style={{height: '60px', width: '100%',}}></div>
+          <div width="200%" style={{height: '60px', width: '100%',}}></div>
           <div className='wrapper' style={offset}>
             
             <div className="shape">
             
             </div>
             <div className="shape2">
-              <img style={{width: '100%', maxWidth: "590px"}} src={require("../assets/code.png")} alt=""/>
+              <div style={{fontSize: '130px'}}>Web Development</div>
+              {/* <img style={{width: '100%', maxWidth: "590px"}} src={require("../assets/code.png")} alt=""/> */}
             </div>
             <p></p>
           </div>
 
-          <div className="move-bg" style={{width: '100%'}}>
+          <div className="" style={{width: '100%', zIndex: 50, backgroundColor: 'white'}}>
             <div style={{"width": '100%',boxShadow: '0px -10px 10px rgba(0, 0, 0, 0.1)', zIndex:32 }} >
               
 

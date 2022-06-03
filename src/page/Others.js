@@ -64,12 +64,12 @@ function Others() {
             
             </div>
             <div className="shape2">
-              <img style={{width: '100%', maxWidth: "590px"}} src={require("../assets/code.png")} alt=""/>
+              <div style={{fontSize: '130px'}}>Others</div>
             </div>
             <p></p>
           </div>
 
-          <div className="move-bg" style={{width: '100%'}}>
+          <div className="" style={{width: '100%'}}>
             <div style={{"width": '100%',boxShadow: '0px -10px 10px rgba(0, 0, 0, 0.1)', zIndex:32, alignItems: 'start' }} >
               
 
@@ -91,7 +91,7 @@ function Others() {
               <div className="text">
                 <div className='text__face'>
                 <h2>Simulation / RPG game</h2>
-                <span>This is a farming simulator, it include Date time system, 
+                <span>This is a farming simulator, it includes date time system, 
                   simplify plant-growing simulation, inventory & item mixing system, story trigging system.</span>
                 </div>
               </div>
@@ -158,9 +158,9 @@ function Others() {
               ))}
             </DragSlider> */}
             <h2>3D/ 2D illustration</h2>
-            <div className="slider-container" style={{marginBottom: '60px'}}>
+            <div className="slider-container"  style={{marginBottom: '60px'}}>
               <center>
-                <Carousel className="slider" style={{position: 'absolute', maxWidth: '600px', width: '100%'}} showArrows={true} showThumbs={false} infiniteLoop={true} autoPlay={true}>
+                <Carousel className="slider" showStatus={false} style={{position: 'absolute', maxWidth: '600px', width: '100%'}} showArrows={true} showThumbs={false} infiniteLoop={true} autoPlay={true}>
                   <div>
                       <img src={require("../assets/24.jpeg")} />
                   </div>
