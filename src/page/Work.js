@@ -56,14 +56,14 @@ function Work() {
             </AppBar>
           </Box>
 
-          <div width="200%" style={{height: '60px', width: '100%',}}></div>
+          <div width="200%" style={{height: '0px', width: '100%',}}></div>
           <div className='wrapper' style={offset}>
             
             <div className="shape">
             
             </div>
             <div className="shape2">
-              <div style={{fontSize: '130px'}}>Web Development</div>
+              <div style={{fontSize: '130px', lineHeight: '300px'}}>Web Development</div>
               {/* <img style={{width: '100%', maxWidth: "590px"}} src={require("../assets/code.png")} alt=""/> */}
             </div>
             <p></p>

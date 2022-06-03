@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 import '../assets/NotoSansTC-Bold.otf'
 import { Card, Grid, Box, Slide, FormControlLabel, Switch, Hidden, Button  } from '@mui/material'
 import zIndex from '@mui/material/styles/zIndex'
-
+import { Link } from "react-router-dom"
 
 function NomalSection(props) {
   // const [checked, setChecked] = React.useState(false);
@@ -141,14 +141,18 @@ function NomalSection(props) {
             {/* </Slide> */}
           </Box>
           <center>
-            <Button style={{
-                borderRadius: 0,
-                padding: "0px 0px",
-                borderColor: "rgba(0,0,0,0.6)",
-                color: "black",
-                border: '2px solid',
-                fontWeight: 500,
-            }}  variant="outlined" className=" txt-hover-outer"><span className="txt-hover ">VIEW More</span></Button>
+            <Link to='/work' style={{textDecoration: 'none !important'}}>
+              <Button style={{
+                  borderRadius: 0,
+                  padding: "0px 0px",
+                  borderColor: "rgba(0,0,0,0.6)",
+                  color: "rgba(0,0,0,0.6)",
+                  border: '2px solid',
+                  fontWeight: 500,
+              }}  variant="outlined" className=" txt-hover-outer">
+                <span className="txt-hover">VIEW More</span>
+              </Button>
+            </Link>
             <p style={{opacity: 0.5}}>Scroll</p> 
             <svg height="250px" style={{paddingTop: '0px'}}>
               <path fill="none" stroke="black" strokeWidth="2" id="triangle" d={`M150 0 L150 ` + -(((props.pos + window.innerHeight + 150) < 0 ? props.pos + window.innerHeight + 150 : '0'))}/>

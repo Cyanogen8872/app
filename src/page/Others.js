@@ -57,14 +57,14 @@ function Others() {
             </AppBar>
           </Box>
 
-          <div width="100%" style={{height: '60px', width: '100%',}}></div>
+          <div width="100%" style={{height: '0px', width: '100%',}}></div>
           <div className='wrapper' style={offset}>
             
             <div className="shape">
             
             </div>
             <div className="shape2">
-              <div style={{fontSize: '130px'}}>Others</div>
+              <div style={{fontSize: '130px', lineHeight: '300px'}}>Others</div>
             </div>
             <p></p>
           </div>
@@ -143,7 +143,7 @@ function Others() {
                     borderRadius: 0,
                     padding: "0px 0px",
                     borderColor: "rgba(0,0,0,0.6)",
-                    color: "black",
+                    color: "rgba(0,0,0,0.6)",
                     border: '2px solid',
                     fontWeight: 500,
                 }}  variant="outlined" className=" txt-hover-outer"><span className="txt-hover ">VIEW demo</span>

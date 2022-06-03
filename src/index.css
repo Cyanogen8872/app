@@ -215,6 +215,7 @@ video {
   background-color: rgba(0,0,0,0.6) !important;
   color:white !important;
   animation: 1s clip;
+  text-decoration: none !important;
 }
 
 .page-cover{
@@ -236,6 +237,11 @@ video {
 .txt-hover {
   pointer-events: auto;
   padding: 12px 30px;
+  
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .scene {
