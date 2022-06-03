@@ -53,6 +53,7 @@ function VideoSectionWithSlider(props) {
             </div>
           </div>
         </div>
+        
         <div className="scene">
         <div height="36px"><h2>Planting System</h2></div>
           <div className="card">

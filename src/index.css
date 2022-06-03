@@ -73,6 +73,11 @@ video {
   background-color: black;
 }
 
+.carousel-slider {
+  max-width: 800px; 
+  width: 100%;
+}
+
 @keyframes example {
   from {background-color: red;}
   to {background-color: yellow;}
@@ -240,6 +245,7 @@ video {
   justify-content: space-between;
   perspective: 800px;
   padding: 26px;
+  
 }
 .scene .card {
   width: 100%;
@@ -250,7 +256,6 @@ video {
   cursor: pointer;
   transition: 1s ease-in-out;
   transform-style: preserve-3d;
-  
 }
 .scene .card:hover {
   transform: rotateY(0.5turn);
@@ -273,6 +278,67 @@ video {
 .scene .card .card__face--back {
   transform: rotateY(0.5turn);
 }
+
+.scene .text {
+  width: 100%;
+  min-width: 240px;
+  max-width: 400px;
+  height: 250px;
+  color: black;
+  transform-style: preserve-3d;
+}
+
+.scene .text .text__face {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+
+.scene-nomal {
+  width: 80%;
+  max-width: 400px;
+  display: inline-block !important;
+  justify-content: space-between;
+  perspective: 800px;
+  padding: 26px;
+}
+.scene-nomal .card {
+  width: 100%;
+  min-width: 240px;
+  max-width: 400px;
+  height: 400px;
+  color: white;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  transform-style: preserve-3d;
+  
+}
+.scene-nomal .card:hover {
+}
+.scene-nomal .card .card__face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: 1s ease-in-out;
+}
+.scene-nomal .card .card__face img {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+
+
+
 
 .MuiFab-sizeLarge {
     background-color: rgba(0,0,0,0.6) !important;

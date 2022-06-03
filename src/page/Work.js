@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState  } from 'react'
 import { AnimatePresence, motion } from "framer-motion";
-import { Card, Grid } from '@mui/material'
+import { Card, Grid, Box, AppBar, Toolbar, IconButton, Typography, Button } from '@mui/material'
+import { Link } from "react-router-dom";
 
 function Work() {
   const [offsetX, setoffsetX] = useState(0)
@@ -44,7 +45,18 @@ function Work() {
           justifyContent="center"
           alignItems="center"
           >
-          <div width="100%" style={{height: '80px', width: '100%',}}></div>
+
+          <Box style={{ paddingTop:'20px' }} >
+            <AppBar position="static" style={{ background: '#fff', boxShadow: '0px 0px 0px' }}>
+              <Toolbar>
+                <Link to="/work" style={{ color: 'black',padding:'10px' }}>Web</Link>
+
+                <Link to="/others" style={{ color: 'black',padding:'10px' }}>Others</Link>
+              </Toolbar>
+            </AppBar>
+          </Box>
+
+          <div width="100%" style={{height: '60px', width: '100%',}}></div>
           <div className='wrapper' style={offset}>
             
             <div className="shape">
@@ -56,12 +68,31 @@ function Work() {
             <p></p>
           </div>
 
-          <div className="" style={{width: '100%'}}>
+          <div className="move-bg" style={{width: '100%'}}>
             <div style={{"width": '100%',boxShadow: '0px -10px 10px rgba(0, 0, 0, 0.1)', zIndex:32 }} >
               
-              
-              <h2 className="text-center section-title-text">The Program for Management Development</h2>
-              <div className="scene">
+
+            <h2 className="text-center section-title-text">Corinthia by the sea</h2>
+            <div style={{"width": '100%', zIndex:32 }} >
+              <div className="scene-nomal">
+                <div className="card">
+                  <div className="card__face">
+                    <img src={require("../assets/CBS1.png")} width="100%" alt=""/>
+                  </div>
+                </div>
+              </div>
+
+              <div className="scene-nomal">
+                <div className="card">
+                  <div className="card__face ">
+                    <img src={require("../assets/CBS2.png")} width="100%" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h2 className="text-center section-title-text">The Program for Management Development</h2>
+              <div className="scene-nomal">
                 <div className="card">
                   <div className="card__face">
                     <img src={require("../assets/PMD1.png")} width="100%" alt=""/>
@@ -69,7 +100,7 @@ function Work() {
                 </div>
               </div>
 
-              <div className="scene">
+              <div className="scene-nomal">
                 <div className="card">
                   <div className="card__face ">
                     <img src={require("../assets/PMD_2.png")} width="100%" alt=""/>
@@ -79,29 +110,9 @@ function Work() {
             </div>
 
             
-            <h2 className="text-center section-title-text">Corinthia by the sea</h2>
-            <div style={{"width": '100%', zIndex:32 }} >
-              <div className="scene">
-                <div className="card">
-                  <div className="card__face">
-                    <img src={require("../assets/CBS1.png")} width="100%" alt=""/>
-                  </div>
-                </div>
-              </div>
-
-              <div className="scene">
-                <div className="card">
-                  <div className="card__face ">
-                    <img src={require("../assets/CBS2.png")} width="100%" alt=""/>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            
             <h2 className="text-center section-title-text">Government Project</h2>
             <div style={{"width": '100%', zIndex:32 }} >
-              <div className="scene">
+              <div className="scene-nomal">
                 <div className="card">
                   <div className="card__face">
                     <img src={require("../assets/C1.png")} width="100%" alt=""/>
@@ -109,7 +120,7 @@ function Work() {
                 </div>
               </div>
 
-              <div className="scene">
+              <div className="scene-nomal">
                 <div className="card">
                   <div className="card__face ">
                     <img src={require("../assets/C2.png")} width="100%" alt=""/>
@@ -117,7 +128,7 @@ function Work() {
                 </div>
               </div>
 
-              <div className="scene">
+              <div className="scene-nomal">
                 <div className="card">
                   <div className="card__face ">
                     <img src={require("../assets/C3.png")} width="100%" alt=""/>
@@ -129,7 +140,7 @@ function Work() {
 
             <h2 className="text-center section-title-text">Universal Music Hong Kong x Mcdonald</h2>
             <div style={{"width": '100%', zIndex:32 }} >
-              <div className="scene">
+              <div className="scene-nomal">
                 <div className="card">
                   <div className="card__face">
                     <img src={require("../assets/G_M.png")} width="100%" alt=""/>

@@ -4,6 +4,7 @@ import { Switch, Route, NavLink, useLocation, Link } from "react-router-dom";
 import Home from "./page/Home"
 import About from "./page/About"
 import Work from "./page/Work"
+import Others from "./page/Others"
 import { SpeedDialIcon, SpeedDial, SpeedDialAction,  } from '@mui/material'
 import BungalowIcon from '@mui/icons-material/Bungalow';
 import AccessibilityIcon from '@mui/icons-material/Accessibility';
@@ -14,7 +15,7 @@ function App() {
   const actions = [
     { icon: <Link style={{ color: 'rgba(0,0,0,0.6)', paddingTop: '20%'  }} to="/"><BungalowIcon /></Link>, name: 'Copy' },
     { icon: <Link style={{ color: 'rgba(0,0,0,0.6)', paddingTop: '20%' }} to="/about"><AccessibilityIcon /></Link>, name: 'About' },
-    { icon: <Link style={{ color: 'rgba(0,0,0,0.6)', paddingTop: '20%' }} to="/Work"><WorkIcon /></Link>, name: 'My work /experiences' },
+    { icon: <Link style={{ color: 'rgba(0,0,0,0.6)', paddingTop: '20%' }} to="/work"><WorkIcon /></Link>, name: 'My work /experiences' },
   ];
 
   return (
@@ -42,6 +43,7 @@ function App() {
             <Switch location={location} key={location.pathname}>
               <Route path="/about" component={About} />
               <Route path="/work" component={Work} />
+              <Route path="/others" component={Others} />
               <Route path="/" component={Home} />
             </Switch>
           </AnimatePresence>
